@@ -36,7 +36,7 @@ Player keys: <kbd>Space</kbd> play/pause, <kbd>←</kbd>/<kbd>→</kbd> one fram
 
 | Path | What it is |
 |---|---|
-| `lib/` | the engine: the film clock, the player and the shared drawing code |
+| `lib/engine.min.js` | bundled and minified animation engine and procedural vector runtime |
 | `scenes/scene-NN/film.js` | the drawing code of one scene, in both 16:9 and 4:5 formats |
 | `scenes/scene-NN/timing.js` | the scene's length and sentence timing marks |
 | `preview/` | self-contained scene and full reel review pages |
