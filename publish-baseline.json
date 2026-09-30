@@ -1,0 +1,97 @@
+{
+ "markedAt": "2026-09-30T10:47:56.401Z",
+ "files": {
+  "lib/core.js": {
+   "sha1": "9f3c06b2f1e65cbc0e8287291813e7a9e2168b1c",
+   "mtime": "2026-09-30T10:47:56.401Z"
+  },
+  "lib/science.js": {
+   "sha1": "95b1ace352ab702293a65863a554289837ebc1e9",
+   "mtime": "2026-09-30T10:47:56.401Z"
+  },
+  "lib/depth.js": {
+   "sha1": "2270a8c330ae19b4abd5e91d78bd53dd32fdc0bb",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "lib/looks-25d.js": {
+   "sha1": "b7f5b2d18543cf18735606e7e478e04898f79bcc",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "lib/looks-science.js": {
+   "sha1": "a7801c128d23c60c259319b0fd5e26eb251bd97c",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-01/film.js": {
+   "sha1": "6906f6783b68327a2724b3060b9baf3e338ec9b5",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-01/timing.js": {
+   "sha1": "d113137ff931c2f42d17e343d939cf80636d5caf",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-02/film.js": {
+   "sha1": "4467ff0913e5619e60b2a30dca05275972341938",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-02/timing.js": {
+   "sha1": "27e4c5e39069bca0bd896210561426f48d091ec1",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-03/film.js": {
+   "sha1": "90b9aee9c93c831b80ad559adce2694637f9e6f8",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-03/timing.js": {
+   "sha1": "3b21f77a62c959ea4084a0acb60679540fb9b704",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-04/film.js": {
+   "sha1": "5d5905af665b2f31ce50e590cf9ac50335273e93",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-04/timing.js": {
+   "sha1": "0b36b1e918714b8e732f6b6b13aee020bb0321e8",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-05/film.js": {
+   "sha1": "df4bf04247cc782d63e539284b49081df28162f0",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-05/timing.js": {
+   "sha1": "8744911b16d8533ff9390642d06d8c63aad86a82",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-06/film.js": {
+   "sha1": "41eb1ce53e5967aa913d26e2a0badafb6849c9b5",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-06/timing.js": {
+   "sha1": "48165a587d9cdc8c4350b234d62b9e7b1579a56f",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-07/film.js": {
+   "sha1": "c439236aa987ef112079d2bbcab25264b467d202",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-07/timing.js": {
+   "sha1": "801f50c2568524f384c9d7560597d18aa8dc63f0",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-08/film.js": {
+   "sha1": "e5522bae0ac620e82813f614ccf3a96aadc9bc1b",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-08/timing.js": {
+   "sha1": "cbe3b71dad91a7634573e3047b982d40e66ce916",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-09/film.js": {
+   "sha1": "9a0586c7715ab7952a33a66bc682a1d6d9f88b51",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  },
+  "scenes/scene-09/timing.js": {
+   "sha1": "14d460e6e216fcecfafc8712748c9ff82a1cf23d",
+   "mtime": "2026-09-30T10:47:56.402Z"
+  }
+ }
+}

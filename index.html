@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>চেতনা (Consciousness) · বিচিত্র বিজ্ঞান</title>
+<meta name="description" content="চেতনা (Consciousness): একটি অ্যানিমেটেড বিজ্ঞান তথ্যচিত্র। প্রতিটি ফ্রেম জাভাস্ক্রিপ্ট এবং HTML5 Canvas-এ সরাসরি আঁকা।">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2307090e'/><circle cx='16' cy='16' r='8' fill='%23f59e0b'/><circle cx='16' cy='16' r='4' fill='%23fff'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700&family=Noto+Serif+Bengali:wght@600;700&display=block" rel="stylesheet">
+<style>
+:root {
+  --ground: #07090e;
+  --panel: #111622;
+  --line: #1e2638;
+  --text: #e8ecf4;
+  --muted: #8d98af;
+  --amber: #f59e0b;
+  --accent: #38bdf8;
+  --ink: #0b0f19;
+}
+* { box-sizing: border-box; }
+html { background: var(--ground); color: var(--text); }
+body { margin: 0; font: 500 15px/1.6 "Hind Siliguri", system-ui, sans-serif; }
+main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 48px; }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .15em; color: var(--amber); text-transform: uppercase; }
+h1 { font-size: clamp(36px, 7vw, 68px); font-weight: 700; line-height: 1.05; margin: 10px 0 14px; color: #fff; }
+.lede { color: var(--muted); margin: 0 0 24px; max-width: 65ch; font-size: 16px; }
+.stage { position: relative; background: #000; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: grid; place-items: center; box-shadow: 0 12px 32px rgba(0,0,0,.6); }
+.play { position: absolute; inset: 0; margin: auto; width: 80px; height: 80px; border-radius: 50%; border: 0; background: var(--amber); cursor: pointer;
+  box-shadow: 0 6px 28px rgba(245,158,11,.45); display: grid; place-items: center; transition: transform .15s ease; }
+.play::before { content: ''; margin-left: 6px; border-style: solid; border-width: 16px 0 16px 26px; border-color: transparent transparent transparent var(--ink); }
+.play:hover { transform: scale(1.06); }
+.play[hidden] { display: none; }
+.stage iframe { border: 0; display: block; width: 100%; aspect-ratio: 16 / 9; }
+.stage.p iframe { aspect-ratio: 4 / 5; width: min(100%, calc(78vh * .8)); }
+.bar { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; justify-content: space-between; margin: 16px 0 32px; }
+.now { font-size: 20px; font-weight: 700; color: #fff; }
+.now span { color: var(--muted); font-size: 14px; font-weight: 500; margin-left: 10px; }
+.tools { display: flex; gap: 16px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--panel); }
+.seg button { font: 600 13px "Hind Siliguri", sans-serif; color: var(--muted); background: none; border: 0; border-radius: 999px; padding: 6px 16px; cursor: pointer; transition: color .15s; }
+.seg button[aria-pressed="true"] { background: var(--text); color: var(--ink); font-weight: 700; }
+a.alone { color: var(--accent); font-size: 14px; text-decoration: none; font-weight: 600; }
+a.alone:hover { text-decoration: underline; }
+h2 { font-size: 14px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+.grid button { text-align: left; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; color: var(--text); cursor: pointer; font: inherit; transition: all .15s; }
+.grid button:hover { border-color: var(--muted); }
+.grid button[aria-current="true"] { border-color: var(--amber); box-shadow: inset 0 0 0 1px var(--amber); }
+.grid .n { display: block; font-size: 18px; font-weight: 700; }
+.grid .d { display: block; color: var(--muted); font-size: 13px; margin-top: 4px; }
+.grid .film { grid-column: span 2; }
+.grid .film .n { font-size: 17px; }
+.keys { color: var(--muted); font-size: 13px; margin-top: 32px; }
+kbd { font-family: "Hind Siliguri", sans-serif; font-size: 12px; font-weight: 600; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 2px 7px; color: var(--text); background: var(--panel); }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.status-pill { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(245,158,11,.15); color: var(--amber); font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">বিচিত্র বিজ্ঞান · Bichitro Biggan</div>
+  <h1>চেতনা (Consciousness)</h1>
+  <div class="status-pill">সম্পূর্ণ তথ্যচিত্রের অ্যানিমেশন · দৃশ্য ০১–০৯ সম্পন্ন</div>
+  <p class="lede">একটি অ্যানিমেটেড বিজ্ঞান তথ্যচিত্র। প্রতিটি ফ্রেম জাভাস্ক্রিপ্ট এবং HTML5 Canvas-এ সরাসরি নিখুঁত গাণিতিক কোডে আঁকা—কোনো ভিডিও ফাইল নেই। অ্যানিমেশনটি কোনো শব্দ ছাড়াই সরাসরি আপনার ব্রাউজারে চলে।</p>
+  <div class="stage" id="stage">
+    <iframe id="player" title="Consciousness" allow="fullscreen" allowfullscreen></iframe>
+    <button class="play" id="play" aria-label="Play" hidden></button>
+  </div>
+  <div class="bar">
+    <div class="now" id="now"></div>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Format">
+        <button data-f="Desktop">16:9 ডেস্কটপ</button>
+        <button data-f="Mobile">4:5 মোবাইল</button>
+      </div>
+      <a class="alone" id="alone" target="_blank" rel="noopener">আলাদা ট্যাবে দেখুন ↗</a>
+    </div>
+  </div>
+  <h2>দৃশ্য নির্বাচন</h2>
+  <div class="grid" id="grid"></div>
+  <p class="keys">ছবিতে ক্লিক করে চালু বা থামান · <kbd>Space</kbd> চালু/থামা · <kbd>←</kbd> <kbd>→</kbd> এক ফ্রেম · <kbd>Shift</kbd> + <kbd>←</kbd> <kbd>→</kbd> এক সেকেন্ড · <kbd>Home</kbd> শুরুতে ফেরা · <kbd>F</kbd> ফুলস্ক্রিন</p>
+</main>
+<script>
+const PROJECT = 'Consciousness', LIST = [{"id":"film","label":"পুরো ভিডিও (দৃশ্য ০১–০9)","d":249},{"id":"01","label":"দৃশ্য 01 · The question (মৃত্যুর পর কি চেতনা থাকে?)","d":36},{"id":"02","label":"দৃশ্য 02 · The neuron forest (মস্তিষ্ক ও নিউরন)","d":16},{"id":"03","label":"দৃশ্য 03 · Physics and experience (পদার্থবিদ্যা ও ব্যক্তিগত অভিজ্ঞতা)","d":21},{"id":"04","label":"দৃশ্য 04 · The quantum world (কোয়ান্টাম জগৎ)","d":29},{"id":"05","label":"দৃশ্য 05 · Two claims (দুটি দাবি)","d":21},{"id":"06","label":"দৃশ্য 06 · Orch-OR (অর্ক-ওআর তত্ত্ব)","d":33},{"id":"07","label":"দৃশ্য 07 · The broken bridge (ভাঙা সেতু)","d":34},{"id":"08","label":"দৃশ্য 08 · The scale of the brain (মস্তিষ্কের স্কেল)","d":31},{"id":"09","label":"দৃশ্য 09 · The honest answer (অমীমাংসিত সত্য)","d":28}];
+const $ = id => document.getElementById(id);
+const mmss = s => Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+const url = (id, f) => id === 'film' ? 'preview/' + PROJECT + '_film_' + f + '.html' : 'preview/' + PROJECT + '_scene-' + id + '_' + f + '.html';
+
+let state = { id: 'film', f: matchMedia('(max-aspect-ratio: 1/1)').matches ? 'Mobile' : 'Desktop' };
+const m = /^#(film|\d+)(?:-(Desktop|Mobile))?$/.exec(location.hash);
+if (m && LIST.some(x => x.id === m[1])) state = { id: m[1], f: m[2] || state.f };
+
+for (const x of LIST) {
+  const b = document.createElement('button');
+  b.dataset.id = x.id; if (x.id === 'film') b.className = 'film';
+  b.innerHTML = '<span class="n">' + x.label + '</span><span class="d">' + mmss(x.d) + '</span>';
+  b.setAttribute('aria-label', x.label + ', ' + mmss(x.d));
+  b.onclick = () => { show({ ...state, id: x.id }); $('stage').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); };
+  $('grid').append(b);
+}
+document.querySelectorAll('.seg button').forEach(b => b.onclick = () => show({ ...state, f: b.dataset.f }));
+
+$('player').addEventListener('load', () => {
+  const w = $('player').contentWindow;
+  const poster = () => { try {
+    if (!(w.__film && w.__film.ready)) return setTimeout(poster, 150);
+    w.__film.seek(Math.min(3, w.__film.duration / 2)); $('play').hidden = false;
+  } catch {} };
+  poster();
+});
+$('play').onclick = () => {
+  $('play').hidden = true;
+  try { const w = $('player').contentWindow; w.document.getElementById('c').click(); w.focus(); } catch {}
+};
+
+function show(s) {
+  state = s;
+  const u = url(s.id, s.f), x = LIST.find(x => x.id === s.id);
+  $('play').hidden = true; $('player').src = u; $('alone').href = u;
+  $('stage').classList.toggle('p', s.f === 'Mobile');
+  $('now').innerHTML = x.label + '<span>' + mmss(x.d) + ' · ' + (s.f === 'Mobile' ? '4:5' : '16:9') + '</span>';
+  document.querySelectorAll('#grid button').forEach(b => b.setAttribute('aria-current', b.dataset.id === s.id));
+  document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === s.f));
+  history.replaceState(null, '', '#' + s.id + '-' + s.f);
+}
+show(state);
+</script>
+</body>
+</html>
