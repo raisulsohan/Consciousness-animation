@@ -1,10 +1,23 @@
 # Consciousness · চেতনা: the animation
 
-The animation of *Consciousness* (চেতনা), the first science documentary for **[Bichitro Biggan](https://github.com/raisulsohan/BichitroBiggan)** (বিচিত্র বিজ্ঞান). Every frame is mathematically composed and drawn in JavaScript on an HTML5 canvas using procedural vector drawing code, with zero video or image files. Each frame is a pure function of time, so any moment can be drawn on its own.
+<p align="center">
+  <a href="https://raisulsohan.github.io/Consciousness-animation/#01-Desktop"><img src="media/peek-1-hospital.webp" width="49%" alt="Hospital monitor flatline and the last spark of consciousness in the hospital room"></a>
+  <a href="https://raisulsohan.github.io/Consciousness-animation/#02-Desktop"><img src="media/peek-2-neuron.webp" width="49%" alt="The 3D neuron forest and electric firing of synapses"></a>
+  <a href="https://raisulsohan.github.io/Consciousness-animation/#06-Desktop"><img src="media/peek-3-quantum.webp" width="49%" alt="Microtubules and quantum Orch-OR superposition collapsing into awareness"></a>
+  <a href="https://raisulsohan.github.io/Consciousness-animation/#08-Desktop"><img src="media/peek-4-scale.webp" width="49%" alt="The golden balance scale weighing brain mass against human consciousness"></a>
+</p>
+
+<h3 align="center"><a href="https://raisulsohan.github.io/Consciousness-animation/">▶ Watch the whole film (4:08) in your browser</a></h3>
+
+<p align="center">Click a clip to open its scene.</p>
+
+<p align="center">
+  <strong>An animated documentary film created, written, directed, and animated by <a href="https://raisulsohan.com">Raisul Sohan</a></strong>
+</p>
+
+The animation of *Consciousness* (চেতনা), the first science documentary for **[Bichitro Biggan](https://github.com/raisulsohan/BichitroBiggan)** (বিচিত্র বিজ্ঞান), conceived, written, and animated by **[Raisul Sohan](https://raisulsohan.com)**. Every frame is mathematically composed and drawn in JavaScript on an HTML5 canvas using his own procedural drawing code, and the film itself uses zero video or image files. The clips above are recordings of the pages. Each frame is a pure function of time, so any moment can be drawn on its own.
 
 The pages play silently.
-
-> **Note:** All 9 scenes of the animated documentary (0:00.0–4:08.8) are complete.
 
 ## Watch
 
@@ -12,7 +25,7 @@ The pages play silently.
 
 Offline, open `index.html` or any page in a browser. No build step and no server are needed.
 
-- `preview/` holds the whole film (`Consciousness_film_Desktop.html`, `Consciousness_film_Mobile.html`) and the film scene by scene:
+- `preview/` holds the whole film (`Consciousness_film_Desktop.html`, `Consciousness_film_Mobile.html`, 4:08) and the film scene by scene:
   `Consciousness_scene-NN_Desktop.html` (16:9, 1920×1080) and `Consciousness_scene-NN_Mobile.html` (4:5, 1080×1350).
 - `scenes/scene-NN/` holds the scenes: `film.js` and `timing.js`.
 
@@ -40,6 +53,7 @@ Player keys: <kbd>Space</kbd> play/pause, <kbd>←</kbd>/<kbd>→</kbd> one fram
 | `scenes/scene-NN/film.js` | the drawing code of one scene, in both 16:9 and 4:5 formats |
 | `scenes/scene-NN/timing.js` | the scene's length and sentence timing marks |
 | `preview/` | self-contained scene and full reel review pages |
+| `media/` | animated preview recordings of key moments |
 
 ## Author & Credits
 
