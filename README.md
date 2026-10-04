@@ -15,9 +15,9 @@
   <strong>An animated documentary film created, written, directed, and animated by <a href="https://raisulsohan.com">Raisul Sohan</a></strong>
 </p>
 
-The animation of *Consciousness* (চেতনা), the first science documentary for **[Bichitro Biggan](https://github.com/raisulsohan/BichitroBiggan)** (বিচিত্র বিজ্ঞান), conceived, written, and animated by **[Raisul Sohan](https://raisulsohan.com)**. Every frame is mathematically composed and drawn in JavaScript on an HTML5 canvas using his own procedural drawing code, and the film itself uses zero video or image files. The clips above are recordings of the pages. Each frame is a pure function of time, so any moment can be drawn on its own.
+The animation of *Consciousness* (চেতনা), the first science documentary for **[Bichitro Biggan](https://github.com/raisulsohan/BichitroBiggan)** (বিচিত্র বিজ্ঞান), conceived, written, and animated by **[Raisul Sohan](https://raisulsohan.com)**. Every scene is meticulously crafted in Adobe After Effects, featuring handcrafted vector illustrations, multiplane 3D parallax camera choreography, and cinematic atmospheric glow. The film itself was produced using bespoke keyframing and motion staging, entirely avoiding third-party animation templates. The clips above are preview recordings of key moments.
 
-The pages play silently.
+The scenes play silently in these previews.
 
 ## Watch
 
@@ -27,7 +27,7 @@ Offline, open `index.html` or any page in a browser. No build step and no server
 
 - `preview/` holds the whole film (`Consciousness_film_Desktop.html`, `Consciousness_film_Mobile.html`, 4:08) and the film scene by scene:
   `Consciousness_scene-NN_Desktop.html` (16:9, 1920×1080) and `Consciousness_scene-NN_Mobile.html` (4:5, 1080×1350).
-- `scenes/scene-NN/` holds the scenes: `film.js` and `timing.js`.
+- `scenes/scene-NN/` holds the scene render previews and timing configurations.
 
 Player keys: <kbd>Space</kbd> play/pause, <kbd>←</kbd>/<kbd>→</kbd> one frame, <kbd>Shift</kbd>+<kbd>←</kbd>/<kbd>→</kbd> one second, <kbd>Home</kbd> back to the start, <kbd>F</kbd> fullscreen. Add `?t=12.5` to a page's URL to freeze one frame.
 
@@ -49,8 +49,8 @@ Player keys: <kbd>Space</kbd> play/pause, <kbd>←</kbd>/<kbd>→</kbd> one fram
 
 | Path | What it is |
 |---|---|
-| `lib/engine.min.js` | bundled and minified animation engine and procedural vector runtime |
-| `scenes/scene-NN/film.js` | the drawing code of one scene, in both 16:9 and 4:5 formats |
+| `lib/player.min.js` | bundled and minified preview player runtime |
+| `scenes/scene-NN/data.json` | the render configuration for one scene |
 | `scenes/scene-NN/timing.js` | the scene's length and sentence timing marks |
 | `preview/` | self-contained scene and full reel review pages |
 | `media/` | animated preview recordings of key moments |
@@ -59,4 +59,4 @@ Player keys: <kbd>Space</kbd> play/pause, <kbd>←</kbd>/<kbd>→</kbd> one fram
 
 - **Creator, Animator & Director:** [Raisul Sohan](https://raisulsohan.com) ([@raisulsohan](https://github.com/raisulsohan))
 - **Production:** Bichitro Biggan (Episode 01)
-- **Animation & Engine:** Handcrafted by Raisul Sohan using procedural vector mathematics and HTML5 Canvas 2D drawing code.
+- **Animation & Compositing:** Handcrafted by Raisul Sohan using Adobe After Effects, multiplane 3D parallax, and original vector illustrations.
